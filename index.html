@@ -30,20 +30,20 @@
         <nav class="header-box-item">
           <ul class="list site-nav">
             <li class="nav-item">
-              <a href="./index.html" class="link current">Студія</a>
+              <a href="./index.html" class="nav-link link current">Студія</a>
             </li>
             <li class="nav-item">
-              <a href="./portfolio.html" class="link">Портфоліо</a>
+              <a href="./portfolio.html" class="nav-link link">Портфоліо</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="link">Контакти</a>
+              <a href="#" class="nav-link link">Контакти</a>
             </li>
           </ul>
         </nav>
         <!-- Зворотній зв'язок -->
         <ul class="list nav-contact header-box-item">
           <li class="contact-item">
-            <a href="malto:info@devstudio.com" class="link contact">
+            <a href="malto:info@devstudio.com" class="contact-link link contact">
               <svg class="contact-icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
@@ -51,7 +51,7 @@
             </a>
           </li>
           <li class="contact-item">
-            <a href="tel:+380961111111" class="link contact">
+            <a href="tel:+380961111111" class="contact-link link contact">
               <svg class="contact-icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
@@ -66,7 +66,7 @@
       <section class="hero overlay">
         <div class="container hero-box">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button primary">Замовити послугу</button>
+          <button data-modal-open type="button" class="button primary">Замовити послугу</button>
         </div>
       </section>
 
@@ -101,13 +101,24 @@
           <h2 class="title">Чим ми займаємося</h2>
           <ul class="list work-box">
             <li class="work-list-item">
-              <img src="./images/img1.jpg" alt="Робота на десктопі" width="370" />
+              <div class="work-img">
+                <img src="./images/img1.jpg" alt="Робота на десктопі" width="370" />
+                <p class="label-work-img">Десктопні додатки</p>
+              </div>
             </li>
             <li class="work-list-item">
-              <img src="./images/img2.jpg" alt="Робота з мобільними додатками" width="370" />
+              <div class="work-img">
+                <img src="./images/img2.jpg" alt="Робота з мобільними додатками" width="370" />
+                <p class="label-work-img">Мобільні додатки</p>
+              </div>
+              
             </li>
             <li class="work-list-item">
-              <img src="./images/img3.jpg" alt="Робота з планшетом" width="370" />
+              <div class="work-img">
+                <img src="./images/img3.jpg" alt="Робота з планшетом" width="370" />
+                <p class="label-work-img">Дизайнерські рішення</p>
+              </div>
+              
             </li>
           </ul>
         </div>
@@ -535,5 +546,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg class="modal-icon" width="18px" height="18px">
+           <use href="./images/icons.svg#icon-close-black"></use>          
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
