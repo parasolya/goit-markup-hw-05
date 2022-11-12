@@ -633,9 +633,13 @@ p {
 
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opasity 150ms linear, visibility 150ms linear;
+  transition: opacity var(--anim-fast), visibility var(--anim-fast);
 }
-
+.backdrop.is-hidden {   
+  opacity: 0;   
+  visibility: hidden;
+  pointer-events: none;
+}
 
 .modal-btn {
   position: absolute;
@@ -660,11 +664,7 @@ p {
   fill: rgba(0, 0, 0, 1);  
 }
 
-.backdrop.is-hidden {   
-  opacity: 0;   
-  visibility: hidden;
-  pointer-events: none;
-}
+
 .modal {
   position: absolute;
   
@@ -678,10 +678,10 @@ p {
 
   transform: translateX(-50%) translateY(-50%);
 
-  transition: transform var(--anim-fast), opasity var(--anim-fast);
+  transition: transform var(--anim-fast), opacity var(--anim-fast);
 }
 
 .backdrop.is-hidden .modal {
   opacity: 0;
-  transform: translateX(-50%), translateY(-70%);
+  transform: translateX(-50%) translateY(-70%);
 }
